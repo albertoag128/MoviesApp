@@ -14,6 +14,7 @@ class GetMoviesFeedUseCase(val repository: MoviesRepository) {
         }
         return moviesList
     }
+
+    data class MoviesFeed(val poster:String, val title:String, val year:String, val rating:String)
 }
 
-data class MoviesFeed(val poster:String, val title:String, val year:String, val rating:String)

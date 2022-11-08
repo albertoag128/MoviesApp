@@ -13,6 +13,7 @@ class GetSingleMovieUseCase(val repository: MoviesRepository){
             movie.year
         )
     }
+
+    data class MovieDetail(val poster:String, val title:String, val plot:String, val genre:String, val rating: String, val year:String)
 }
 
-data class MovieDetail(val poster:String, val title:String, val plot:String, val genre:String, val rating: String, val year:String)
