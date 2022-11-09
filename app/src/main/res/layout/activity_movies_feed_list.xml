@@ -12,21 +12,11 @@
         android:id="@+id/logo"
         android:layout_width="@dimen/logo_resolution"
         android:layout_height="@dimen/logo_resolution"
-        android:src="@drawable/icon"
+        android:src="@drawable/logo"
         android:layout_marginStart="@dimen/logo_margin_left"
         app:layout_constraintStart_toStartOf="@+id/feed_list_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/title_feed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_feed_title"
-        android:textSize="@dimen/feed_title_size"
-        android:layout_marginEnd="@dimen/title_margin_right"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@id/feed_list_recycler_view"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/feed_list_recycler_view"
