@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="body_padding">20dp</dimen>
+    <dimen name="logo_resolution">60dp</dimen>
+    <dimen name="logo_margin_left">10dp</dimen>
+    <dimen name="feed_title_size">46dp</dimen>
+    <dimen name="title_margin_right">10dp</dimen>
+    <dimen name="recycler_margin_top">20dp</dimen>
+    <dimen name="item_margin_bottom">20dp</dimen>
+
+    <dimen name="item_padding">10dp</dimen>
+    <dimen name="image_width_feed_item">66dp</dimen>
+    <dimen name="image_height_feed_item">100dp</dimen>
+    <dimen name="image_items_margin">10dp</dimen>
+    <dimen name="general_item_margin">10dp</dimen>
+
+    <dimen name="film_title_size">20dp</dimen>
+    <dimen name="year_title_size">18dp</dimen>
+    <dimen name="rating_size">16dp</dimen>
+
+    <dimen name="year_margin_top">8dp</dimen>
+    <dimen name="item_margin_start">10dp</dimen>
+    <dimen name="icon_star_resolution">16dp</dimen>
+    <dimen name="star_margin_start">6dp</dimen>
+</resources>

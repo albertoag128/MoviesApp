@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white50"
+    android:padding="@dimen/item_padding"
+    android:layout_marginBottom="@dimen/item_margin_bottom"
+    android:layout_height="wrap_content">
+    
+    <ImageView
+        android:id="@+id/image_item"
+        android:layout_width="@dimen/image_width_feed_item"
+        android:layout_height="@dimen/image_height_feed_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars"
+        />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/film_title_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Harry Potter y la piedra filosofal"
+        android:textSize="@dimen/film_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_item"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/yearlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/year_title_size"
+        android:layout_marginTop="@dimen/year_margin_top"
+        app:layout_constraintTop_toBottomOf="@id/film_title_item"
+        app:layout_constraintStart_toStartOf="@id/film_title_item"
+        tools:text="Year"
+        />
+
+    <TextView
+        android:textColor="@color/yellow"
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/year_title_size"
+        app:layout_constraintStart_toEndOf="@+id/yearlabel"
+        app:layout_constraintTop_toTopOf="@id/yearlabel"
+        android:layout_marginStart="@dimen/item_margin_start"
+        tools:text="2007"
+        />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/ratinglabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Rating"
+        android:textSize="@dimen/rating_size"
+        app:layout_constraintStart_toStartOf="@id/yearlabel"
+        app:layout_constraintBottom_toBottomOf="@id/image_item"/>
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2.9"
+        android:textSize="@dimen/rating_size"
+        android:layout_marginStart="@dimen/item_margin_start"
+        app:layout_constraintStart_toEndOf="@id/ratinglabel"
+        app:layout_constraintBottom_toBottomOf="@id/ratinglabel"/>
+
+    <ImageView
+        android:layout_width="@dimen/icon_star_resolution"
+        android:layout_height="@dimen/icon_star_resolution"
+        android:src="@drawable/star"
+        android:layout_marginStart="@dimen/star_margin_start"
+        app:layout_constraintStart_toEndOf="@id/rating"
+        app:layout_constraintTop_toTopOf="@id/rating"
+        app:layout_constraintBottom_toBottomOf="@id/rating"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
