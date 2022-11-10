@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -32,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -40,6 +45,7 @@ dependencies {
     //RETROFIT
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'androidx.navigation:navigation-fragment:2.5.2'
     //ROOM
     def room_version = "2.4.3"
     implementation "androidx.room:room-runtime:$room_version"
@@ -49,6 +55,18 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:31.0.2')
     //REALTIME
     implementation 'com.google.firebase:firebase-database-ktx'
+    //LIVEDATA AND VIEWMODEL
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+    //GLIDE
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+    //SKELETON
+    implementation 'com.faltenreich:skeletonlayout:4.0.0'
+    //NAVIGATION
+    def nav_version = "2.5.2"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     //ANDROID DEFAULT IMPLEMENTATIONS
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'

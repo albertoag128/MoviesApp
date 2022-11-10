@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movies_feed">
+
+    <fragment
+        android:id="@+id/movies_feed"
+        android:name="com.example.moviesapp.presentation.MoviesFeedFragment"
+        android:label="@string/app_feed_title"/>
+
+    <!--<action
+        android:id="@+id/start_app_to_feed_movies"
+        app:destination="@id/blankFragment2" />-->
+
+
+
+</navigation>

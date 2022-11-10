@@ -5,25 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/body_padding"
-    android:background="@drawable/background_gradient"
-    tools:context=".MainActivity">
+    tools:context=".presentation.MoviesFeedActivity">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="@dimen/logo_resolution"
-        android:layout_height="@dimen/logo_resolution"
-        android:src="@drawable/logo"
-        android:layout_marginStart="@dimen/logo_margin_left"
-        app:layout_constraintStart_toStartOf="@+id/feed_list_recycler_view"
+    <androidx.fragment.app.FragmentContainerView
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@+id/fragment_container_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/feed_list_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/recycler_margin_top"
-        tools:listitem="@layout/activity_movies_item_list"
-        app:layout_constraintTop_toBottomOf="@id/logo"/>
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
