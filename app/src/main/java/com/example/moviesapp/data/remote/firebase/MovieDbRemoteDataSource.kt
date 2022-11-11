@@ -6,7 +6,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
 
-class MoviesFirebaseRemoteDataSource: MoviesRemoteDataRepository {
+class MovieDbRemoteDataSource: MoviesRemoteDataRepository {
 
     override suspend fun getAllMovies(): List<Movie> {
         val movies = mutableListOf<Movie>()

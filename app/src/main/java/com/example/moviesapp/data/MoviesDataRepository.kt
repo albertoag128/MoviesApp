@@ -1,30 +1,32 @@
 package com.example.moviesapp.data
 
-import com.example.moviesapp.data.local.room.MovieRoomLocalDataSource
-import com.example.moviesapp.data.remote.firebase.MoviesFirebaseRemoteDataSource
-import com.example.moviesapp.data.remote.retrofit.MovieRetrofitRemoteDataSource
+import com.example.moviesapp.data.local.room.MovieDbLocalDataSource
+import com.example.moviesapp.data.remote.retrofit.MovieApiRemoteDataSource
 import com.example.moviesapp.domain.Movie
 import com.example.moviesapp.domain.MoviesRepository
 
 class MoviesDataRepository (
-    private val localSource: MovieRoomLocalDataSource,
-    private val remoteSource: MovieRetrofitRemoteDataSource) : MoviesRepository{
+    private val localSource: MovieDbLocalDataSource,
+    private val remoteSource: MovieApiRemoteDataSource) : MoviesRepository{
 
 
     override suspend fun getAllMovies(): List<Movie> {
-        if(localSource.getAllMovies().isNullOrEmpty()){
-            val movies = remoteSource.getAllMovies()
+        var movies = localSource.getAllMovies()
+        if(movies.isNullOrEmpty()){
+            movies = remoteSource.getAllMovies()
             localSource.saveMovies(movies)
             return movies
         }
-        return localSource.getAllMovies()
+        return movies
     }
 
     override suspend fun getMovieById(id: String): Movie? {
-        if(localSource.getMovieById(id)==null){
-            return remoteSource.getMovieById(id)
+        var movie = localSource.getMovieById(id)
+        if(movie == null){
+            movie = remoteSource.getMovieById(id)
+            return movie
         }
-        return localSource.getMovieById(id)
+        return movie
     }
 
 }
