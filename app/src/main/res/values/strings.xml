@@ -1,6 +1,10 @@
 <resources>
+
     <string name="app_name">MoviesApp</string>
     <string name="app_feed_title">Movies</string>
+    <string name="app_detail_title">Movie</string>
 
+    <string name="movies_rating_label">Rating</string>
+    <string name="movies_year_label">Year</string>
 
 </resources>

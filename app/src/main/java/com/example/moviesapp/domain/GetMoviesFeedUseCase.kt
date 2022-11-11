@@ -1,6 +1,6 @@
 package com.example.moviesapp.domain
 
-class GetMoviesFeedUseCase(val repository: MoviesRepository) {
+class GetMoviesFeedUseCase(private val repository: MoviesRepository) {
     suspend fun execute():List<MoviesFeed>{
         val movies = repository.getAllMovies()
 

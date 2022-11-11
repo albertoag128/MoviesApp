@@ -11,9 +11,9 @@ class MoviesAdapter: RecyclerView.Adapter<MoviesViewHolder>(){
     private val dataSet = mutableListOf<GetMoviesFeedUseCase.MoviesFeed>()
     private var item: ((String) -> Unit)? = null
 
-    /*fun setOnClickItem(item: (String) -> Unit) {
+    fun setOnClickItem(item: (String) -> Unit) {
         this.item = item
-    }*/
+    }
 
     fun setDataItems(movies: List<GetMoviesFeedUseCase.MoviesFeed>){
         dataSet.clear()

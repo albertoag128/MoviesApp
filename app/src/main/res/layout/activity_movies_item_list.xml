@@ -20,10 +20,11 @@
 
     <TextView
         android:id="@+id/film_title_item"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:text="Harry Potter y la piedra filosofal"
         android:textSize="@dimen/film_title_size"
+        android:layout_marginStart="@dimen/title_margin_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/image_item"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +38,7 @@
         android:layout_marginTop="@dimen/year_margin_top"
         app:layout_constraintTop_toBottomOf="@id/film_title_item"
         app:layout_constraintStart_toStartOf="@id/film_title_item"
-        tools:text="Year"
+        android:text="@string/movies_year_label"
         />
 
     <TextView
@@ -55,7 +56,7 @@
         android:id="@+id/ratinglabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Rating"
+        android:text="@string/movies_rating_label"
         android:textSize="@dimen/rating_size"
         app:layout_constraintStart_toStartOf="@id/yearlabel"
         app:layout_constraintBottom_toBottomOf="@id/image_item"
