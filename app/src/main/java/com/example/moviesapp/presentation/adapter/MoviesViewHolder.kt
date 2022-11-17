@@ -13,8 +13,8 @@ class MoviesViewHolder(private val view: View): RecyclerView.ViewHolder(view){
         binding.filmTitleItem.text = movie.title
         binding.year.text = movie.year
         binding.rating.text = movie.rating
-        /*view.setOnClickListener {
+        view.setOnClickListener {
             item?.invoke(movie.id)
-        }*/
+        }
     }
 }

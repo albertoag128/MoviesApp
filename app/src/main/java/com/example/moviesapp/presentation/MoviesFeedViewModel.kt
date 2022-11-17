@@ -7,7 +7,7 @@ import com.example.moviesapp.domain.GetMoviesFeedUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MoviesFeedViewModel (val getMoviesFeedUseCase: GetMoviesFeedUseCase) : ViewModel(){
+class MoviesFeedViewModel (private val getMoviesFeedUseCase: GetMoviesFeedUseCase) : ViewModel(){
 
     val moviesFeedPublisher:MutableLiveData<MoviesUiState> by lazy{
         MutableLiveData<MoviesUiState>()
