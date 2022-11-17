@@ -14,11 +14,11 @@
         android:layout_height="@dimen/image_height_feed_item"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
         tools:src="@tools:sample/avatars"
         />
 
     <TextView
-        android:textColor="@color/white"
         android:id="@+id/film_title_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,6 @@
         />
 
     <TextView
-        android:textColor="@color/white"
         android:id="@+id/yearlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +41,6 @@
         />
 
     <TextView
-        android:textColor="@color/yellow"
         android:id="@+id/year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,17 +52,16 @@
         />
 
     <TextView
-        android:textColor="@color/white"
         android:id="@+id/ratinglabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Rating"
         android:textSize="@dimen/rating_size"
         app:layout_constraintStart_toStartOf="@id/yearlabel"
-        app:layout_constraintBottom_toBottomOf="@id/image_item"/>
+        app:layout_constraintBottom_toBottomOf="@id/image_item"
+        />
 
     <TextView
-        android:textColor="@color/white"
         android:id="@+id/rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,7 +69,8 @@
         android:textSize="@dimen/rating_size"
         android:layout_marginStart="@dimen/item_margin_start"
         app:layout_constraintStart_toEndOf="@id/ratinglabel"
-        app:layout_constraintBottom_toBottomOf="@id/ratinglabel"/>
+        app:layout_constraintBottom_toBottomOf="@id/ratinglabel"
+        />
 
     <ImageView
         android:layout_width="@dimen/icon_star_resolution"

@@ -2,7 +2,7 @@ package com.example.moviesapp.domain
 
 class GetSingleMovieUseCase(val repository: MoviesRepository){
 
-    fun execute(id:String):MovieDetail{
+    suspend fun execute(id:String):MovieDetail{
         val movie = repository.getMovieById(id)!!
         return MovieDetail(
             movie.poster,

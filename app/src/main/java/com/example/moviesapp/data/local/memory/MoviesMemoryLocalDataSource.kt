@@ -4,7 +4,7 @@ import com.example.app.commons.MemoryDataStore
 import com.example.moviesapp.data.local.MoviesLocalDataRepository
 import com.example.moviesapp.domain.Movie
 
-class MoviesMemoryLocalDataSource (val memoryDataStore: MemoryDataStore<Movie>): MoviesLocalDataRepository{
+class MoviesMemoryLocalDataSource (private val memoryDataStore: MemoryDataStore<Movie>): MoviesLocalDataRepository{
 
     override fun getAllMovies(): List<Movie> {
         return memoryDataStore.getAll()

@@ -1,6 +1,6 @@
 package com.example.moviesapp.domain
 
 interface MoviesRepository {
-    fun getAllMovies(): List<Movie>
-    fun getMovieById(id:String):Movie?
+    suspend fun getAllMovies(): List<Movie>
+    suspend fun getMovieById(id:String):Movie?
 }

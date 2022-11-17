@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="body_padding">20dp</dimen>
-    <dimen name="logo_resolution">60dp</dimen>
+    <dimen name="body_padding">10dp</dimen>
+    <dimen name="logo_resolution">80dp</dimen>
     <dimen name="logo_margin_left">10dp</dimen>
     <dimen name="feed_title_size">46dp</dimen>
     <dimen name="title_margin_right">10dp</dimen>
-    <dimen name="recycler_margin_top">20dp</dimen>
+    <dimen name="recycler_margin_top">16dp</dimen>
     <dimen name="item_margin_bottom">20dp</dimen>
 
     <dimen name="item_padding">10dp</dimen>
